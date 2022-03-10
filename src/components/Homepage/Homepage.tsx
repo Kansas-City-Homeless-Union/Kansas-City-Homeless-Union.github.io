@@ -1,7 +1,9 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import { contactLinks, demandStyle } from "./Homepage.styles";
-// import bothMayorQs from "./bothMayorQs.png";
+// import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
+import ImgWithCaption from "../../ImgWithCaption/ImgWithCaption";
+import stopTheSweepRally from "./stopTheSweepRally.jpg";
 
 const Homepage = () => {
   // turn contact into a footer?
@@ -14,19 +16,33 @@ const Homepage = () => {
           alt="KCHU later Qadhafi speaking to KC Mayor Quinton Lucas"
           width={500}
         /> */}
-      <Typography variant="h4">OUR DEMANDS</Typography>
-      <Typography variant="h6" style={demandStyle}>
-        Demand 1
+      <Typography style={{ marginBottom: 20 }}>
+        Some kind of short mission statement here. Safe, affordable housing for
+        all, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam in tortor dolor. Integer sodales tincidunt faucibus. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit.
       </Typography>
-      <Typography variant="h6" style={demandStyle}>
-        Demand 2
-      </Typography>
-      <Typography variant="h6" style={demandStyle}>
-        Demand 3
-      </Typography>
-      <Typography variant="h6" style={demandStyle}>
-        Demand 4
-      </Typography>
+      <ImgWithCaption
+        src={stopTheSweepRally}
+        caption=""
+        alt="Stop the Sweep Rally at City Hall"
+        styleOverride={{ maxHeight: 350, maxWidth: "90%", marginBottom: 15 }}
+      />
+      <div>
+        <Typography variant="h4">OUR DEMANDS</Typography>
+        <Typography variant="h6" style={demandStyle}>
+          Demand 1
+        </Typography>
+        <Typography variant="h6" style={demandStyle}>
+          Demand 2
+        </Typography>
+        <Typography variant="h6" style={demandStyle}>
+          Demand 3
+        </Typography>
+        <Typography variant="h6" style={demandStyle}>
+          Demand 4
+        </Typography>
+      </div>
       {/* <List sx={{ listStyleType: "disc", border: "3px solid black" }}>
           <ListSubheader
             sx={{
@@ -45,18 +61,6 @@ const Homepage = () => {
             Your search may have been removed or is not yet in the system
           </ListItem>
         </List> */}
-      <Typography style={{ marginTop: 20 }}>
-        Some kind of mission statement here. Safe, affordable housing for all,
-        etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-        tortor dolor. Integer sodales tincidunt faucibus. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Duis ligula tellus, sagittis ac nulla
-        vitae, consequat porta nibh. Mauris eleifend enim ex, a euismod nulla
-        elementum non. Vestibulum ante ipsum primis in faucibus orci luctus et
-        ultrices posuere cubilia curae; Nullam non luctus neque, a tincidunt
-        tellus. Integer rutrum erat vitae risus tincidunt elementum. Phasellus
-        posuere purus laoreet pretium malesuada. Sed convallis pellentesque
-        viverra.
-      </Typography>
       <Box style={{ display: "flex", flexDirection: "column" }}>
         <Typography variant="h6" style={{ marginTop: 20 }}>
           Contact
