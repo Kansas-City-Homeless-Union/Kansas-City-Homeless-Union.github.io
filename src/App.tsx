@@ -7,6 +7,8 @@ import Homepage from "./components/Homepage/Homepage";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
 import Contact from "./components/Contact/Contact";
 import Resources from "./components/Resources/Resources";
+import { Box } from "@mui/material";
+import { container } from "./App.styles";
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       <Router>
         <MuiThemeProvider>
           <Navbar />
-          <div style={{ padding: 15 }}>
+          <Box style={container}>
+            <div />
             <Routes>
               <Route path="/" element={<Homepage />} />
             </Routes>
@@ -27,7 +30,8 @@ function App() {
             <Routes>
               <Route path="/resources" element={<Resources />} />
             </Routes>
-          </div>
+            <div />
+          </Box>
         </MuiThemeProvider>
       </Router>
     </div>

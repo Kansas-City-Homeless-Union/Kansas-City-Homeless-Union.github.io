@@ -27,7 +27,7 @@ const Navbar = () => {
     <div style={{ marginBottom: 75 }}>
       <AppBar>
         <Container>
-          <Toolbar disableGutters>
+          <Toolbar disableGutters style={{ maxWidth: "unset" }}>
             <IconButton
               size="large"
               aria-label="open navigation menu"
