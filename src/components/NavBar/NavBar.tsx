@@ -11,6 +11,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { link } from "./NavBar.styles";
+import { SocialIcon } from "react-social-icons";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<any>(null);
@@ -76,6 +77,20 @@ const Navbar = () => {
             <Typography style={{ margin: "auto" }} variant="h5">
               KC Homeless Union
             </Typography>
+            <SocialIcon
+              url="https://www.facebook.com/kchomelessunion"
+              target="_blank"
+              style={{ marginRight: 15 }}
+            />
+            <SocialIcon
+              url="https://twitter.com/kchomelessunion"
+              target="_blank"
+              style={{ marginRight: 15 }}
+            />
+            {/* <SocialIcon
+              url="https://instagram.com/kchomelessunion"
+              target="_blank"
+            /> */}
           </Toolbar>
         </Container>
       </AppBar>

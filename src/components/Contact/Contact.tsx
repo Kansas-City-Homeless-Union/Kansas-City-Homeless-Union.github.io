@@ -1,18 +1,74 @@
-import React from "react";
+import { Button, TextField, Typography } from "@mui/material";
+import React, { useState } from "react";
 
 const Contact = () => {
-  // contact form, don't forget return email, copy over from apc-web
+  const [formData, setFormData] = useState({
+    title: "",
+    message: "",
+    email: "",
+  });
+
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div>
-      Maecenas viverra metus a vulputate viverra. Morbi sed urna purus. Donec
-      ultrices euismod lacus quis tincidunt. Praesent quam ex, fermentum a
-      interdum a, malesuada eu metus. Fusce fermentum eleifend tempus.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae; Nam lobortis sollicitudin nibh a accumsan. Mauris molestie
-      nulla non turpis varius, eget semper ligula viverra. Pellentesque
-      facilisis nulla a ornare pulvinar. Morbi aliquet, nisi in pulvinar
-      molestie, odio est venenatis nisl, nec consectetur mauris diam et lectus.
-      Praesent id lobortis tortor.
+      <div>
+        <form name="contact" method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <header>
+            <Typography variant="h4" style={{ marginBottom: 25 }}>
+              Contact Us
+            </Typography>
+          </header>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 15,
+              width: "80%",
+              margin: "auto",
+            }}
+          >
+            <TextField
+              label="Return Email"
+              placeholder="Your Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <TextField
+              label="Title"
+              placeholder="Subject"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              name="message"
+              label="Message"
+              placeholder="Your message here..."
+              value={formData.message}
+              onChange={handleChange}
+              rows={3}
+              multiline
+              required
+            />
+          </div>
+          <Button
+            type="submit"
+            variant="contained"
+            style={{ marginTop: 20, color: "black" }}
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };

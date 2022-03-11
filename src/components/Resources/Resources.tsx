@@ -8,7 +8,9 @@ import {
 import React from "react";
 import ResourceCard from "../ResourceCard/ResourceCard";
 
-// housing, food, clothes, healthcare, mental health
+const accordionStyle = {
+  marginBottom: 20,
+};
 
 const Resources = () => {
   // card with links, don't put raw phone numbers/emails up
@@ -17,7 +19,7 @@ const Resources = () => {
       <Typography variant="h4" style={{ marginBottom: 25 }}>
         Resources
       </Typography>
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography>Housing</Typography>
         </AccordionSummary>
@@ -42,7 +44,7 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography>Food</Typography>
         </AccordionSummary>
@@ -61,7 +63,7 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography>Clothes</Typography>
         </AccordionSummary>
@@ -80,7 +82,7 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography>Healthcare</Typography>
         </AccordionSummary>
@@ -93,7 +95,7 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <AccordionSummary expandIcon={<ExpandMore />}>
           <Typography>Mental Health</Typography>
         </AccordionSummary>

@@ -2,8 +2,9 @@ import React from "react";
 import { Typography, Box } from "@mui/material";
 import { contactLinks, demandStyle } from "./Homepage.styles";
 // import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
-import ImgWithCaption from "../../ImgWithCaption/ImgWithCaption";
+import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
 import stopTheSweepRally from "./stopTheSweepRally.jpg";
+import { determineTextWidth } from "../../utils/determineTextWidth";
 
 const Homepage = () => {
   // turn contact into a footer?
@@ -16,18 +17,24 @@ const Homepage = () => {
           alt="KCHU later Qadhafi speaking to KC Mayor Quinton Lucas"
           width={500}
         /> */}
-      <Typography style={{ marginBottom: 20 }}>
-        Some kind of short mission statement here. Safe, affordable housing for
-        all, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nullam in tortor dolor. Integer sodales tincidunt faucibus. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
-      </Typography>
       <ImgWithCaption
         src={stopTheSweepRally}
         caption=""
         alt="Stop the Sweep Rally at City Hall"
         styleOverride={{ maxHeight: 350, maxWidth: "90%", marginBottom: 15 }}
       />
+      <Typography
+        style={{
+          margin: "auto",
+          marginBottom: 20,
+          width: determineTextWidth(window.innerWidth),
+        }}
+      >
+        Some kind of short mission statement here. Safe, affordable housing for
+        all, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam in tortor dolor. Integer sodales tincidunt faucibus. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit.
+      </Typography>
       <div>
         <Typography variant="h4">OUR DEMANDS</Typography>
         <Typography variant="h6" style={demandStyle}>
@@ -43,25 +50,7 @@ const Homepage = () => {
           Demand 4
         </Typography>
       </div>
-      {/* <List sx={{ listStyleType: "disc", border: "3px solid black" }}>
-          <ListSubheader
-            sx={{
-              fontWeight: 700,
-              lineHeight: "24px",
-              fontSize: "16px",
-              color: "black",
-            }}
-          >
-            Search Help
-          </ListSubheader>
-          <ListItem sx={{ display: "list-item" }}>
-            Double check your spelling
-          </ListItem>
-          <ListItem sx={{ display: "list-item" }}>
-            Your search may have been removed or is not yet in the system
-          </ListItem>
-        </List> */}
-      <Box style={{ display: "flex", flexDirection: "column" }}>
+      {/* <Box style={{ display: "flex", flexDirection: "column" }}>
         <Typography variant="h6" style={{ marginTop: 20 }}>
           Contact
         </Typography>
@@ -74,7 +63,7 @@ const Homepage = () => {
         <a href="mailto:example@gmail.com" style={contactLinks}>
           and other people we want our demands being made to
         </a>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
