@@ -1,0 +1,8 @@
+.footerLink {
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+    text-decoration-color: #f7f7f7;
+}

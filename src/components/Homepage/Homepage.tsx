@@ -1,20 +1,12 @@
 import { Typography, Box } from "@mui/material";
-import { contactLinks, demandStyle } from "./Homepage.styles";
-// import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
+import { demandStyle } from "./Homepage.styles";
 import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
 import stopTheSweepRally from "./stopTheSweepRally.jpg";
 import { determineTextWidth } from "../../utils/determineTextWidth";
 
 const Homepage = () => {
-  // where to add an image
-  // show facebook feed https://developers.facebook.com/docs/plugins/page-plugin/
   return (
     <Box>
-      {/* <img
-          src={bothMayorQs}
-          alt="KCHU later Qadhafi speaking to KC Mayor Quinton Lucas"
-          width={500}
-        /> */}
       <ImgWithCaption
         src={stopTheSweepRally}
         caption=""
@@ -48,20 +40,6 @@ const Homepage = () => {
           Demand 4
         </Typography>
       </div>
-      {/* <Box style={{ display: "flex", flexDirection: "column" }}>
-        <Typography variant="h6" style={{ marginTop: 20 }}>
-          Contact
-        </Typography>
-        <a href="mailto:MayorQ@kcmo.org" style={contactLinks}>
-          Mayor Quinton Lucas
-        </a>
-        <a href="mailto:manager@kcmo.org" style={contactLinks}>
-          City Manager Brian Platt
-        </a>
-        <a href="mailto:example@gmail.com" style={contactLinks}>
-          and other people we want our demands being made to
-        </a>
-      </Box> */}
     </Box>
   );
 };

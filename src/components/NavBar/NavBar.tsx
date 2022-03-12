@@ -61,26 +61,26 @@ const Navbar = () => {
               open={!!anchorElNav}
               onClose={handleCloseNavMenu}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/" style={link}>
+              <Link to="/" style={link}>
+                <MenuItem onClick={handleCloseNavMenu}>
                   <Typography>Home</Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/whoweare" style={link}>
+                </MenuItem>
+              </Link>
+              <Link to="/whoweare" style={link}>
+                <MenuItem onClick={handleCloseNavMenu}>
                   <Typography>Who We Are</Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/resources" style={link}>
+                </MenuItem>
+              </Link>
+              <Link to="/resources" style={link}>
+                <MenuItem onClick={handleCloseNavMenu}>
                   <Typography>Resources</Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/contact" style={link}>
+                </MenuItem>
+              </Link>
+              <Link to="/contact" style={link}>
+                <MenuItem onClick={handleCloseNavMenu}>
                   <Typography>Contact</Typography>
-                </Link>
-              </MenuItem>
+                </MenuItem>
+              </Link>
             </Menu>
             <Typography style={{ margin: "auto" }} variant="h5">
               {navHeaderText}

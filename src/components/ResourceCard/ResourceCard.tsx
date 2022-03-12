@@ -1,4 +1,14 @@
-import { Card, CardContent, CardHeader, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import {
+  container,
+  dataRowStyle,
+  datumStyle,
+  description1Style,
+  description2Style,
+  header,
+  horizontalLine,
+  labelStyle,
+} from "./ResourceCard.styles";
 
 export interface IResourceCardProps {
   title: string;
@@ -9,23 +19,8 @@ export interface IResourceCardProps {
   email?: string;
   description1?: string;
   description2?: string;
+  showBottomLine?: boolean;
 }
-
-const dataRowStyle = {
-  justifyContent: "center",
-  display: "flex",
-  // flexDirection: "row" as "row",
-};
-
-const labelStyle = {
-  marginRight: 5,
-  fontWeight: "bold",
-  display: "inline-block",
-};
-
-const datumStyle = {
-  display: "inline-block",
-};
 
 const ResourceCard = ({
   title,
@@ -36,66 +31,61 @@ const ResourceCard = ({
   email,
   description1,
   description2,
+  showBottomLine = true,
 }: IResourceCardProps) => {
-  // needs easier on the eyes styling
   return (
-    <Card
-      style={{ maxWidth: 550, margin: "auto", marginBottom: 15, padding: 5 }}
-    >
-      <CardHeader title={title} />
-      <CardContent
-      // style={{
-      //   margin: "auto",
-      // }}
-      >
-        {website && (
-          <div style={{ ...dataRowStyle }}>
-            <Typography style={labelStyle}>Website:</Typography>
-            <Link
-              underline="hover"
-              href={website}
-              target="_blank"
-              style={datumStyle}
-              color="black"
-            >
-              {website}
-            </Link>
-          </div>
-        )}
-        {address && (
-          <div style={{ ...dataRowStyle }}>
-            <Typography style={labelStyle}>Address:</Typography>
-            <Typography>{address}</Typography>
-          </div>
-        )}
-        {phone && (
-          <div style={{ ...dataRowStyle }}>
-            <Typography style={labelStyle}>Phone:</Typography>
-            <Typography>{phone}</Typography>
-          </div>
-        )}
-        {email && (
-          <div style={{ ...dataRowStyle }}>
-            <Typography style={labelStyle}>Email:</Typography>
-            <Typography>{email}</Typography>
-          </div>
-        )}
-        {hours && (
-          <div style={{ ...dataRowStyle }}>
-            <Typography style={labelStyle}>Hours:</Typography>
-            <Typography>{hours}</Typography>
-          </div>
-        )}
-        {description1 && (
-          <Typography style={{ marginTop: 17, marginBottom: 17 }}>
-            {description1}
-          </Typography>
-        )}
-        {description2 && (
-          <Typography style={{ marginBottom: 17 }}>{description2}</Typography>
-        )}
-      </CardContent>
-    </Card>
+    <Box style={container}>
+      <Typography variant="h6" style={header}>
+        {title}
+      </Typography>
+      {website && (
+        <div style={dataRowStyle}>
+          <Typography style={labelStyle}>Website:</Typography>
+          <Link
+            underline="hover"
+            href={website}
+            target="_blank"
+            style={datumStyle}
+            color="black"
+          >
+            {website}
+          </Link>
+        </div>
+      )}
+      {address && (
+        <div style={dataRowStyle}>
+          <Typography style={labelStyle}>Address:</Typography>
+          <Typography>{address}</Typography>
+        </div>
+      )}
+      {phone && (
+        <div style={dataRowStyle}>
+          <Typography style={labelStyle}>Phone:</Typography>
+          <Typography>{phone}</Typography>
+        </div>
+      )}
+      {email && (
+        <div style={dataRowStyle}>
+          <Typography style={labelStyle}>Email:</Typography>
+          <Typography>{email}</Typography>
+        </div>
+      )}
+      {hours && (
+        <div style={dataRowStyle}>
+          <Typography style={labelStyle}>Hours:</Typography>
+          <Typography>{hours}</Typography>
+        </div>
+      )}
+      {description1 && (
+        <Typography style={description1Style}>{description1}</Typography>
+      )}
+      {description2 && (
+        <Typography style={description2Style(showBottomLine)}>
+          {description2}
+        </Typography>
+      )}
+      {showBottomLine && <div style={horizontalLine} />}
+    </Box>
   );
 };
 

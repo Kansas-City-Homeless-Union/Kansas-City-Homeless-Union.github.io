@@ -4,8 +4,7 @@ import kchuCityHall from "./kchuCityHall.jpg";
 import bothMayorQs from "./bothMayorQs.png";
 import stopTheSweepRally from "./stopTheSweepRally.jpg";
 import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
-
-const textMargin = { marginBottom: 10 };
+import { textMargin } from "./WhoWeAre.styles";
 
 const WhoWeAre = () => {
   return (
