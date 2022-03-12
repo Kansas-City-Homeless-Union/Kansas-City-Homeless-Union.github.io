@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import React from "react";
 import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
 import kchuCityHall from "./kchuCityHall.jpg";
 import bothMayorQs from "./bothMayorQs.png";

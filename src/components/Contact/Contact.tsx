@@ -1,5 +1,5 @@
 import { Button, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,11 +60,7 @@ const Contact = () => {
               required
             />
           </div>
-          <Button
-            type="submit"
-            variant="contained"
-            style={{ marginTop: 20, color: "black" }}
-          >
+          <Button type="submit" variant="contained" style={{ marginTop: 20 }}>
             Submit
           </Button>
         </form>

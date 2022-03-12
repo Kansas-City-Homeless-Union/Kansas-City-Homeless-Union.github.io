@@ -16,6 +16,14 @@ import { SocialIcon } from "react-social-icons";
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<any>(null);
 
+  const socialIconStyle = {
+    marginLeft: 15,
+    width: window.innerWidth > 500 ? 45 : 35,
+    height: window.innerWidth > 500 ? 45 : 35,
+  };
+
+  const navHeaderText = window.innerWidth > 425 ? "KC Homeless Union" : "KCHU";
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -75,17 +83,19 @@ const Navbar = () => {
               </MenuItem>
             </Menu>
             <Typography style={{ margin: "auto" }} variant="h5">
-              KC Homeless Union
+              {navHeaderText}
             </Typography>
             <SocialIcon
               url="https://www.facebook.com/kchomelessunion"
               target="_blank"
-              style={{ marginRight: 15 }}
+              style={socialIconStyle}
+              fgColor="#f7f7f7"
             />
             <SocialIcon
               url="https://twitter.com/kchomelessunion"
               target="_blank"
-              style={{ marginRight: 15 }}
+              style={socialIconStyle}
+              fgColor="#f7f7f7"
             />
             {/* <SocialIcon
               url="https://instagram.com/kchomelessunion"

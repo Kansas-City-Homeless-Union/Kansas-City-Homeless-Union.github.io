@@ -5,11 +5,19 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import React from "react";
 import ResourceCard from "../ResourceCard/ResourceCard";
 
-const accordionStyle = {
-  marginBottom: 20,
+const accordionProps = {
+  variant: "outlined" as "outlined",
+  style: {
+    marginBottom: 20,
+    backgroundColor: "#f2f2f2",
+    // color: "#f7f7f7",
+  },
+};
+
+const accordionHeaderProps = {
+  variant: "h5" as "h5",
 };
 
 const Resources = () => {
@@ -19,9 +27,9 @@ const Resources = () => {
       <Typography variant="h4" style={{ marginBottom: 25 }}>
         Resources
       </Typography>
-      <Accordion style={accordionStyle}>
+      <Accordion {...accordionProps}>
         <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography>Housing</Typography>
+          <Typography {...accordionHeaderProps}>Housing</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ResourceCard
@@ -29,6 +37,8 @@ const Resources = () => {
             website="https://www.restartinc.org/"
             hours="Open 24 hours"
             phone="(816) 842-1199"
+            description1="For 40 years, reStart has provided Kansas City’s most vulnerable population with a continuum of housing services. Our unique programming allows us to act as the only homeless agency in Kansas City serving all homeless populations including singles, families, couples, individuals experiencing mental health illnesses, LGBTQ+ identifying individuals, veterans, unaccompanied youth, non-traditional families and persons with HIV/AIDS."
+            description2="Our organization’s culture of inclusion allows us to provide services to everyone at risk or currently experiencing homelessness. We accept people as they are and don’t require those asking for help to attest to a differing belief, religious affiliation, or traditional family structure."
           />
           <ResourceCard
             title="Restart Inc"
@@ -44,28 +54,9 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion style={accordionStyle}>
+      <Accordion {...accordionProps}>
         <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography>Food</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ResourceCard
-            title="Restart Inc"
-            website="https://www.restartinc.org/"
-            hours="Open 24 hours"
-            phone="(816) 842-1199"
-          />
-          <ResourceCard
-            title="Restart Inc"
-            website="https://www.restartinc.org/"
-            hours="Open 24 hours"
-            phone="(816) 842-1199"
-          />
-        </AccordionDetails>
-      </Accordion>
-      <Accordion style={accordionStyle}>
-        <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography>Clothes</Typography>
+          <Typography {...accordionHeaderProps}>Food</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ResourceCard
@@ -82,9 +73,28 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion style={accordionStyle}>
+      <Accordion {...accordionProps}>
         <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography>Healthcare</Typography>
+          <Typography {...accordionHeaderProps}>Clothes</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <ResourceCard
+            title="Restart Inc"
+            website="https://www.restartinc.org/"
+            hours="Open 24 hours"
+            phone="(816) 842-1199"
+          />
+          <ResourceCard
+            title="Restart Inc"
+            website="https://www.restartinc.org/"
+            hours="Open 24 hours"
+            phone="(816) 842-1199"
+          />
+        </AccordionDetails>
+      </Accordion>
+      <Accordion {...accordionProps}>
+        <AccordionSummary expandIcon={<ExpandMore />}>
+          <Typography {...accordionHeaderProps}>Healthcare</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ResourceCard
@@ -95,9 +105,9 @@ const Resources = () => {
           />
         </AccordionDetails>
       </Accordion>
-      <Accordion style={accordionStyle}>
+      <Accordion {...accordionProps}>
         <AccordionSummary expandIcon={<ExpandMore />}>
-          <Typography>Mental Health</Typography>
+          <Typography {...accordionHeaderProps}>Mental Health</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ResourceCard

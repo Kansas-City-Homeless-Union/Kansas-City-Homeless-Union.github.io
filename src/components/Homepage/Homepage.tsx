@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography, Box } from "@mui/material";
 import { contactLinks, demandStyle } from "./Homepage.styles";
 // import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
@@ -7,7 +6,6 @@ import stopTheSweepRally from "./stopTheSweepRally.jpg";
 import { determineTextWidth } from "../../utils/determineTextWidth";
 
 const Homepage = () => {
-  // turn contact into a footer?
   // where to add an image
   // show facebook feed https://developers.facebook.com/docs/plugins/page-plugin/
   return (

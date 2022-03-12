@@ -1,5 +1,3 @@
-import React from "react";
-
 // move to a higher level file (theme?)
 const widthBreakpoint = 925;
 

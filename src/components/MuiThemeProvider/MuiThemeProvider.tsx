@@ -6,13 +6,13 @@ const MuiThemeProvider = ({ children }: React.PropsWithChildren<any>) => {
     () =>
       createTheme({
         palette: {
-          primary: {
+          secondary: {
             main: "#e3df6b",
             light: "#faf79d",
             dark: "#aba978",
             contrastText: "black",
           },
-          secondary: {
+          primary: {
             main: "#1c1c1c",
             light: "#292929",
             dark: "black",
