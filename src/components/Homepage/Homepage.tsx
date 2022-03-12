@@ -20,10 +20,9 @@ const Homepage = () => {
           width: determineTextWidth(window.innerWidth),
         }}
       >
-        Some kind of short mission statement here. Safe, affordable housing for
-        all, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nullam in tortor dolor. Integer sodales tincidunt faucibus. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
+        Kansas City Homeless Union (KCHU) is a union of unhoused Kansas Citians,
+        actively seeking equality and equity, and fighting against the system
+        that perpetuates and sustains homelessness.
       </Typography>
       <div>
         <Typography variant="h4">OUR DEMANDS</Typography>
