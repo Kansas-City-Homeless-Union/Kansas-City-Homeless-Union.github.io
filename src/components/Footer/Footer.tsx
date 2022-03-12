@@ -2,9 +2,12 @@ import "./footer.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
+const breakpoint = 500;
+
 const Footer = () => {
   const linkStyle = {
-    marginRight: window.innerWidth < 500 ? 10 : 25,
+    marginRight: window.innerWidth < breakpoint ? 15 : 25,
+    fontSize: window.innerWidth < breakpoint ? ".925rem" : "1rem",
     color: "#1c1c1c",
     textDecoration: "none",
   };
