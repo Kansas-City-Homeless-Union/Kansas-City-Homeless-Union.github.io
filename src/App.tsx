@@ -2,6 +2,7 @@ import "./App.css";
 import MuiThemeProvider from "./components/MuiThemeProvider/MuiThemeProvider";
 import Navbar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Causes from "./components/Causes/Causes";
 import Homepage from "./components/Homepage/Homepage";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
 import Contact from "./components/Contact/Contact";
@@ -21,6 +22,7 @@ function App() {
               <div />
               <Routes>
                 <Route path="/whoweare" element={<WhoWeAre />} />
+                <Route path="/causes" element={<Causes />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/" element={<Homepage />} />
