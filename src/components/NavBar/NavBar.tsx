@@ -14,10 +14,11 @@ import { link } from "./NavBar.styles";
 import               "./NavBar.css";
 import { SocialIcon } from "react-social-icons";
 
+
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<any>(null);
   const [headerLarge, setHeaderLarge] = useState<boolean>(true);
-  const [resizeFired, setResizeFired] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   const socialIconStyle = {
     marginLeft: 15,
@@ -25,7 +26,7 @@ const Navbar = () => {
     height: window.innerWidth > 500 ? 45 : 35,
   };
 
-  const navHeaderText = window.innerWidth > 425 ? "KC Homeless Union" : "KCHU";
+  const navHeaderText = () => windowWidth > 1000 ? "KC Homeless Union" : "KCHU";
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -40,25 +41,23 @@ const Navbar = () => {
     const winScroll = document.body.scrollTop ||
                       document.documentElement.scrollTop;
 
-    if (resizeFired || winScroll > heightToHideFrom) {
+    if (windowWidth || winScroll > heightToHideFrom) {
         headerLarge &&      // to limit setting state only the first time
-        window.innerWidth > 425 &&
         setHeaderLarge(false);
     } else {
         setHeaderLarge(true);
     }
   };
 
-  // If resizing ever happens we are just going to make the header small just in case
-  const listenToResize = () => {
-    setResizeFired(true);
-    listenToScroll();
-  };
+  const listenToResize = () => setWindowWidth(window.innerWidth);
+
+  const HeaderText = () => <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText()}</a>;
+
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
     window.addEventListener("resize", listenToResize);
-    return () => {
+      return () => {
         window.removeEventListener("scroll", listenToScroll);
         window.removeEventListener("resize", listenToResize);
     }
@@ -125,7 +124,8 @@ const Navbar = () => {
                           </Link>
                       </Menu>
                       <Typography style={{ margin: "auto", fontSize: headerLarge ? "5em" : "3em" }} component="h1" className="font-transition">
-                          <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText}</a>
+                          {/* <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText(window.innerWidth, windowWidth)}</a> */}
+                          <HeaderText />
                       </Typography>
                           <SocialIcon
                               url="https://www.facebook.com/kchomelessunion"
