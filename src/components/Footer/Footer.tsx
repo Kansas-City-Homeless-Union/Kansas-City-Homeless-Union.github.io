@@ -31,7 +31,7 @@ const Footer = () => {
       <div
         style={{
           display: "flex",
-          maxWidth: 750,
+          maxWidth: 900,
           margin: "auto",
           padding: 5,
         }}
@@ -44,6 +44,9 @@ const Footer = () => {
         </Link>
         <Link to={"/membership"} className="footerLink">
             <Typography style={linkStyle}>Membership</Typography>
+        </Link>
+        <Link to={"/news"} className="footerLink">
+            <Typography style={linkStyle}>News</Typography>
         </Link>
         <Link to={"/causes"} className="footerLink">
             <Typography style={linkStyle}>What Causes Homelessness?</Typography>

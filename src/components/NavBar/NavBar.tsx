@@ -107,6 +107,11 @@ const Navbar = () => {
                                   <Typography>Membership</Typography>
                               </MenuItem>
                           </Link>
+                          <Link to="/news" style={link}>
+                              <MenuItem onClick={handleCloseNavMenu}>
+                                  <Typography>News</Typography>
+                              </MenuItem>
+                          </Link>
                           <Link to="/causes" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>What Causes Homelessness?</Typography>
