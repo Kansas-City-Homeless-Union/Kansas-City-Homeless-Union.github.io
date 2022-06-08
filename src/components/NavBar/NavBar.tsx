@@ -103,9 +103,14 @@ const Navbar = () => {
                                   <Typography>Who We Are</Typography>
                               </MenuItem>
                           </Link>
+                          <Link to="/membership" style={link}>
+                              <MenuItem onClick={handleCloseNavMenu}>
+                                  <Typography>Membership</Typography>
+                              </MenuItem>
+                          </Link>
                           <Link to="/causes" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
-                                  <Typography>What causes homelessness?</Typography>
+                                  <Typography>What Causes Homelessness?</Typography>
                               </MenuItem>
                           </Link>
                           <Link to="/resources" style={link}>
@@ -119,10 +124,9 @@ const Navbar = () => {
                               </MenuItem>
                           </Link>
                       </Menu>
-                      {/* <Typography style={{ margin: "auto" }} variant={ headerLarge ? "h1" : "h5" }> */}
-                          <Typography style={{ margin: "auto", fontSize: headerLarge ? "5em" : "3em" }} component="h1" className="font-transition">
-                              {navHeaderText}
-                          </Typography>
+                      <Typography style={{ margin: "auto", fontSize: headerLarge ? "5em" : "3em" }} component="h1" className="font-transition">
+                          <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText}</a>
+                      </Typography>
                           <SocialIcon
                               url="https://www.facebook.com/kchomelessunion"
                               target="_blank"
