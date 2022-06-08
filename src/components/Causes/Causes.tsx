@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { Typography } from "@mui/material";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ResponsiveContainer from "../ResponsiveContainer/ResponsiveContainer";
-import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
 import { textMargin } from "./Causes.styles";
 
 
@@ -22,12 +19,10 @@ const Causes = () => {
     }
 
     return (
-        <div>
+        <div style={{ textAlign: "left" }}>
             <Typography variant="h4" component="h2" style={{ marginBottom: 25 }}>
                 What Causes Homelessness?
             </Typography>
-            {/* <ResponsiveContainer> */}
-                {/* <div> */}
                 <Typography style={textMargin}>
                     Many people are under the false impression that homelessness is a result of laziness or a sense of entitlement. That the homeless would rather sit back and accept handouts or do drugs rather than contribute to their communities. This is patently false.
                 </Typography>
@@ -38,12 +33,6 @@ const Causes = () => {
                     Furthermore, roughly 17% of homeless adults are employed (2012 Conference of Mayors Report).
                     So, what causes homelessness? Here are just a few things.
                 </Typography>
-                {/* </div> */}
-                {/* <ImgWithCaption
-                    src={stopTheSweepRally}
-                    caption="Stop the Sweep Rally at City Hall"
-                    /> */}
-                {/* </ResponsiveContainer> */}
                 <List>
                     <ListItem>
                         <Typography style={textMargin}>

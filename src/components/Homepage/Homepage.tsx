@@ -1,8 +1,8 @@
 import { Typography, Stack, Divider } from "@mui/material";
-import { demandStyle } from "./Homepage.styles";
+/* import { demandStyle } from "./Homepage.styles"; */
 import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
 import stopTheSweepRally from "./stopTheSweepRally.jpg";
-import { determineTextWidth } from "../../utils/determineTextWidth";
+/* import { determineTextWidth } from "../../utils/determineTextWidth"; */
 
 const Homepage = () => {
   return (

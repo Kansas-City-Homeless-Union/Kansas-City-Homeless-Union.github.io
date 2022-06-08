@@ -57,10 +57,12 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    window.addEventListener("scroll", listenToScroll);
-    return () =>
+    window.addEventListener("resize", listenToResize);
+    return () => {
         window.removeEventListener("scroll", listenToScroll);
-  }, [])
+        window.removeEventListener("resize", listenToResize);
+    }
+  })
 
   return (
       <div style={{ marginBottom: 75 + (headerLarge ? 50 : 0)}}>
