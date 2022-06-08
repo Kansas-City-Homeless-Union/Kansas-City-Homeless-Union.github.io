@@ -1,0 +1,6 @@
+.font-transition {
+  -webkit-transition: color 2s, font-size 2s;
+     -moz-transition: color 2s, font-size 2s;
+       -o-transition: color 2s, font-size 2s;
+          transition: color 2s, font-size 2s;
+}
