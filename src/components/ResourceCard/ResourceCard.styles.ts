@@ -18,6 +18,13 @@ export const container = {
 
 export const header = { marginBottom: 5 };
 
+export const descriptionStyle = (index: number, length: number) => {
+    const isLast       = index === length - 1;
+    const marginBottom = isLast ? 0 : 17;
+    const marginTop    = index === 0 ? 17 : 'auto';
+    return { marginBottom: marginBottom, marginTop: marginTop };
+};
+
 export const description1Style = { marginTop: 17, marginBottom: 17 };
 
 export const description2Style = (showBottomLine: boolean) => {

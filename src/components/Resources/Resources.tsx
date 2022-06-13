@@ -42,14 +42,16 @@ const Resources = () => {
               Resources
           </Typography>
               {
-                  Object.keys(resourceDetails).map((sectionTitle: string) => {
+                  Object.keys(resourceDetails).map((sectionTitle: string, outerIndex: number) => {
+                      let runningIndex = outerIndex * 100;
+                      const idx = () => runningIndex++;
                       const details = resourceDetails[sectionTitle];
-                      const resourceCards = details.map((resource : any, index: number) => index === details.length - 1 ? <ResourceCard showBottomLine={false} {...resource}/> : <ResourceCard {...resource} />);
-                      return <Accordion {...accordionProps}><AccordionSummary expandIcon={<ExpandMore />}>
+                      const resourceCards = details.map((resource : any, index: number) => <ResourceCard key={idx()} {...resource}/>);
+                      return <Accordion key={idx()} {...accordionProps}><AccordionSummary expandIcon={<ExpandMore />}>
                           <Typography {...accordionHeaderProps}>{sectionTitle}</Typography>
                       </AccordionSummary>;
-                      <HorizontalHeaderLine />
-                      <AccordionDetails>{resourceCards}</AccordionDetails></Accordion>
+                      <HorizontalHeaderLine key={idx()} />
+                      <AccordionDetails key={idx()}>{resourceCards}</AccordionDetails></Accordion>
                   })
               }
       </div>

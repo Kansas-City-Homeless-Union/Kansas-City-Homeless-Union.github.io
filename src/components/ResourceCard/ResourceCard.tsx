@@ -1,10 +1,10 @@
 import { Box, Link, Typography } from "@mui/material";
+import React from 'react';
 import {
   container,
   dataRowStyle,
   datumStyle,
-  description1Style,
-  description2Style,
+  descriptionStyle,
   header,
   horizontalLine,
   labelStyle,
@@ -17,10 +17,17 @@ export interface IResourceCardProps {
   hours?: string;
   phone?: string;
   email?: string;
-  description1?: string;
-  description2?: string;
-  showBottomLine?: boolean;
+  description?: string;
 }
+
+const Description = ({ content } : { content : string }) => {
+    const lines = content.split('\n');
+    const inner = lines.map((line: string, index: number) => {
+        const isLast = index === lines.length - 1;
+        return <React.Fragment key={index}><Typography style={descriptionStyle(index, lines.length)}>{line}</Typography><div style={isLast ? horizontalLine : {}} /></React.Fragment>
+    });
+    return <div>{inner}</div>
+};
 
 const ResourceCard = ({
   title,
@@ -29,9 +36,7 @@ const ResourceCard = ({
   hours,
   phone,
   email,
-  description1,
-  description2,
-  showBottomLine = true,
+  description,
 }: IResourceCardProps) => {
   return (
     <Box style={container}>
@@ -76,15 +81,7 @@ const ResourceCard = ({
           <Typography>{hours}</Typography>
         </div>
       )}
-      {description1 && (
-        <Typography style={description1Style}>{description1}</Typography>
-      )}
-      {description2 && (
-        <Typography style={description2Style(showBottomLine)}>
-          {description2}
-        </Typography>
-      )}
-      {showBottomLine && <div style={horizontalLine} />}
+      {description && <Description content={description}/>}
     </Box>
   );
 };
