@@ -97,11 +97,11 @@ const Navbar = () => {
                                   <Typography>Home</Typography>
                               </MenuItem>
                           </Link>
-                          <Link to="/whoweare" style={link}>
+                          {/* <Link to="/whoweare" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
-                                  <Typography>Who We Are</Typography>
+                              <Typography>Who We Are</Typography>
                               </MenuItem>
-                          </Link>
+                              </Link> */}
                           <Link to="/membership" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>Membership</Typography>
@@ -117,11 +117,11 @@ const Navbar = () => {
                                   <Typography>What Causes Homelessness?</Typography>
                               </MenuItem>
                           </Link>
-                          <Link to="/resources" style={link}>
+                          {/* <Link to="/resources" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
-                                  <Typography>Resources</Typography>
+                              <Typography>Resources</Typography>
                               </MenuItem>
-                          </Link>
+                              </Link> */}
                           <Link to="/contact" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>Contact</Typography>

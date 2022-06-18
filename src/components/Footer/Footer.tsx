@@ -39,9 +39,9 @@ const Footer = () => {
         <Link to={"/"} className="footerLink">
           <Typography style={linkStyle}>Home</Typography>
         </Link>
-        <Link to={"/whoweare"} className="footerLink">
-          <Typography style={linkStyle}>Who We Are</Typography>
-        </Link>
+        {/* <Link to={"/whoweare"} className="footerLink">
+            <Typography style={linkStyle}>Who We Are</Typography>
+            </Link> */}
         <Link to={"/membership"} className="footerLink">
             <Typography style={linkStyle}>Membership</Typography>
         </Link>
@@ -51,9 +51,9 @@ const Footer = () => {
         <Link to={"/causes"} className="footerLink">
             <Typography style={linkStyle}>What Causes Homelessness?</Typography>
         </Link>
-        <Link to={"/resources"} className="footerLink">
-          <Typography style={linkStyle}>Resources</Typography>
-        </Link>
+        {/* <Link to={"/resources"} className="footerLink">
+            <Typography style={linkStyle}>Resources</Typography>
+            </Link> */}
         <Link to={"/contact"} className="footerLink">
           <Typography style={linkStyle}>Contact</Typography>
         </Link>
