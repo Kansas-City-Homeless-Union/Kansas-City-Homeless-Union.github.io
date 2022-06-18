@@ -1,7 +1,7 @@
 import "./App.css";
 import MuiThemeProvider from "./components/MuiThemeProvider/MuiThemeProvider";
 import Navbar from "./components/NavBar/NavBar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Causes from "./components/Causes/Causes";
 import Homepage from "./components/Homepage/Homepage";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
