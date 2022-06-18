@@ -14,9 +14,7 @@ const Membership = () => {
             <Typography style={textMargin}>
                 Remember the information that you provide on the form, it will be used to identify you. We will get you a union card as soon as possible.
             </Typography>
-            <Typography style={textMargin}>
-                Add form here
-            </Typography>
+            <a href="https://airtable.com/shrYboYdZOFT91CTj"><Typography style={textMargin} component="h3" variant="h3">SIGN UP HERE</Typography></a>
         </div>
     );
 };
