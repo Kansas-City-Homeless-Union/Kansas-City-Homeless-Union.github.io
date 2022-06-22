@@ -7,15 +7,18 @@ import { textMargin } from "./Causes.styles";
 
 const Causes = () => {
 
+    // Editors note: these counts will be off in dev mode by a factor of 2 b/c in dev mode
+    // react calls component function bodies twice to check for side effects during development.
+    // This is fine in a production build
     let superCount    = 1;
     let footnoteCount = 1;
     const Superscript = () => {
-        const display = superCount++ / 2;
+        const display = superCount++;
         return <sup><a href={`#fn${display}`} id={`ref${display}`}>{display}</a></sup>
     }
     const FootNote = (props : any) => {
-        const display = footnoteCount++ / 2;
-        return <li><sup id={`fn${display}`}><a href={props.link}>{props.children}</a><a href={`#ref${display}`} title={`Jump back to footnote ${display} in the text.`}>↩</a></sup></li>
+        const display = footnoteCount++;
+        return <li><a href={props.link}>{props.children}</a></li>
     }
 
     return (
