@@ -11,13 +11,10 @@ const Causes = () => {
     // react calls component function bodies twice to check for side effects during development.
     // This is fine in a production build
     let superCount    = 1;
-    let footnoteCount = 1;
     const Superscript = () => {
-        const display = superCount++;
-        return <sup><a href={`#fn${display}`} id={`ref${display}`}>{display}</a></sup>
+        return <sup>{superCount++}</sup>
     }
     const FootNote = (props : any) => {
-        const display = footnoteCount++;
         return <li><a href={props.link}>{props.children}</a></li>
     }
 
