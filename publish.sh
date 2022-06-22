@@ -14,4 +14,5 @@ git add .
 git commit -m 'Publish site'
 git push origin -f gh-pages:gh-pages
 git switch -
+git stash pop
 git branch -D gh-pages
