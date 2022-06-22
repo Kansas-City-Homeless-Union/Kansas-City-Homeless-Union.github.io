@@ -50,3 +50,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - who we are page
 - resources page
 - look into server side rendering in build for SEO purposes
+  - This will require removing components thats use `useLayoutEffect`, so this is probably more work than it seemed at first 
