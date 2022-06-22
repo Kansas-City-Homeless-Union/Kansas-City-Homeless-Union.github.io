@@ -16,5 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Deploy react app to github pages
-      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
+    
+    - name: Install and Build 🔧
+      run: |
+        npm install
+        npm run build
+    
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build 
