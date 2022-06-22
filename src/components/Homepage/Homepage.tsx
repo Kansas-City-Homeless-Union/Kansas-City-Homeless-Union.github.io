@@ -31,26 +31,26 @@ const Homepage = () => {
               <Typography variant="h2">How to Help</Typography>
               <Typography component="h3" variant="h4">Hire Us!</Typography>
               <Typography>
-          We have skills to be used. Some of us are electricians, some know construction. We are not lazy: we want to work! The Homeless Union is also a resource for the homeless to be hired, with payment going directly into the hands of the homeless and into this organization. Use our contact form to find out more.
+                  We have skills to be used. Some of us are electricians, some know construction. We are not lazy: we want to work! The Homeless Union is also a resource for the homeless to be hired, with payment going directly into the hands of the homeless and into this organization. Use our contact form to find out more.
               </Typography>
               <Typography component="h3" variant="h4">Donate</Typography>
               <Typography>
-              You put money directly into the hands of the homeless without going through a third-party who profits from us. You can donate directly at [INSERT PAYMENT INFORMATION]. This money is used to purchase supplies, such as food, water, and heating methods. It is also used for fuel costs used for transporting homeless people to and from their jobs (yes, many of us are employed, we just can’t afford a home).
-              If you don’t want to give money for us to purchase supplies, you can provide the supplies yourself. You can bring them directly to a camp and we’ll take them and distribute them. The location of the camps is constantly changing, as the City prefers to clear us out rather than help us. Please use our Contact tab to inquire where a nearby camp is, and we’ll get back to you as soon as we can.
-              Supplies we need include: canned food, potable water, razors, shaving cream, toothbrushes, toothpaste, feminine hygiene products, firewood, tents, sleeping bags, and sturdy trash bags. If you have a working phone that you aren’t using, we would gladly accept this donation.
+                  You put money directly into the hands of the homeless without going through a third-party who profits from us. You can donate directly at <a href="https://cash.app/$hugyohoodinc">our cashapp</a>. This money is used to purchase supplies, such as food, water, and heating methods. It is also used for fuel costs used for transporting homeless people to and from their jobs (yes, many of us are employed, we just can’t afford a home).
+                  If you don’t want to give money for us to purchase supplies, you can provide the supplies yourself. You can bring them directly to a camp and we’ll take them and distribute them. The location of the camps is constantly changing, as the City prefers to clear us out rather than help us. Please use our Contact tab to inquire where a nearby camp is, and we’ll get back to you as soon as we can.
+                  Supplies we need include: canned food, potable water, razors, shaving cream, toothbrushes, toothpaste, feminine hygiene products, firewood, tents, sleeping bags, and sturdy trash bags. If you have a working phone that you aren’t using, we would gladly accept this donation.
               </Typography>
               <Typography component="h3" variant="h4">Vote</Typography>
               <Typography>
-              Ask your potential councilman, mayor, or other politician what they will do to help end homelessness. Do not accept platitudes or hand-waving. If they do not want to create lasting change for the homeless, they do not deserve to be in a position of power.
+                  Ask your potential councilman, mayor, or other politician what they will do to help end homelessness. Do not accept platitudes or hand-waving. If they do not want to create lasting change for the homeless, they do not deserve to be in a position of power.
               </Typography>
               <Typography component="h3" variant="h4">Volunteer</Typography>
               <Typography>
-              There is always something to do. Trash pile-up is a serious problem in most homeless camps. Bringing trash bags, work gloves, and a truck to a homeless camp, bagging and taking trash, and then bringing them to the dump would help us enormously. Calling trash pile-up an eyesore and a hazard is a standard tactic the City uses to justify kicking us out and moving us out of the public eye. Some people even use homeless camps as an illegal dumping ground, placing the blame on us.
-              There are also many services we need. If you’re a barber and can offer free haircuts, come on down. If you have access to clothes washing facilities, we need to wash our clothes the same as anyone else. If there is any service you can provide, contact us and we can see if your service can help our cause and people in general.
+                  There is always something to do. Trash pile-up is a serious problem in most homeless camps. Bringing trash bags, work gloves, and a truck to a homeless camp, bagging and taking trash, and then bringing them to the dump would help us enormously. Calling trash pile-up an eyesore and a hazard is a standard tactic the City uses to justify kicking us out and moving us out of the public eye. Some people even use homeless camps as an illegal dumping ground, placing the blame on us.
+                  There are also many services we need. If you’re a barber and can offer free haircuts, come on down. If you have access to clothes washing facilities, we need to wash our clothes the same as anyone else. If there is any service you can provide, contact us and we can see if your service can help our cause and people in general.
               </Typography>
               <Typography component="h3" variant="h4">DO NOT BE SILENT!</Typography>
               <Typography>
-              One of our greatest enemies is apathy! Speak out and demand change! If you know a homeless camp is going to be swept (this means we will be forcibly removed), show up and voice your opposition. Write to your leaders and demand they take action.
+                  One of our greatest enemies is apathy! Speak out and demand change! If you know a homeless camp is going to be swept (this means we will be forcibly removed), show up and voice your opposition. Write to your leaders and demand they take action.
               </Typography>
           </Stack>
           {/* <Typography
