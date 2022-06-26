@@ -1,22 +1,21 @@
 import { Typography, Stack, Divider } from "@mui/material";
 /* import { demandStyle } from "./Homepage.styles"; */
 import ImgWithCaption from "../ImgWithCaption/ImgWithCaption";
-import stopTheSweepRally from "./stopTheSweepRally.jpg";
+import negotiations from "./negotiations.jpg";
 /* import { determineTextWidth } from "../../utils/determineTextWidth"; */
 
 const Homepage = () => {
   return (
       <Stack gap={3}  divider={<Divider orientation="horizontal" flexItem />} >
-          {/* Swap this with somethign we have rights to */}
-          {/* <ImgWithCaption
-              src={stopTheSweepRally}
-              caption=""
-              alt="Stop the Sweep Rally at City Hall"
+          <ImgWithCaption
+              src={negotiations}
+              caption="Union members negotiating with Mayor Quinton Lucas of Kansas City, MO, April 6, 2021"
+              alt="Union members and city officials seated at and standing around a picnic table."
               styleOverride={{ maxHeight: 350, maxWidth: "90%", marginBottom: 15 }}
-              /> */}
+          />
           <Typography variant="h2">Our Story</Typography>
           <Typography>
-              The Kansas City Homeless Union was founded in January 2021 under the auspices of the Kansas City Tenants Union. As a union by and for the homeless, we have petitioned the City Council, Mayor, and others for better conditions for the homeless of this city.
+              The Kansas City Homeless Union was founded in January 2021 under the auspices of the <a href="https://kctenants.org/">Kansas City Tenants Union</a>. As a union by and for the homeless, we have petitioned the City Council, Mayor, and others for better conditions for the homeless of this city.
               In early 2021, we occupied the lawn of the KCMO City Hall to demand assistance from the city. We refused to lay beaten and unseen. To be seen is to be heard.
               They heard us loud and clear. The City’s response was false promises and half measures, moving some of us into hotels temporarily, but offering no real, lasting change and no long-term help. After we left the City Hall lawn, they showed their true colors: they put up a fence.
               Now the City Council wants to update their ordinances to make it so that anyone on city property who impedes pedestrian traffic is breaking the law, be it by setting up a tent, sleeping in a sleeping-bag, or just sitting too long. Their language may be obscured, but their message is clear: homelessness is a crime.
