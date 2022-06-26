@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0e56744d.css",
+    "main.js": "/static/js/main.2b6ea652.js",
+    "static/js/787.cea32b94.chunk.js": "/static/js/787.cea32b94.chunk.js",
+    "static/media/bothMayorQs.png": "/static/media/bothMayorQs.49ffaecfc0c6c5b0a288.png",
+    "static/media/stopTheSweepRally.jpg": "/static/media/stopTheSweepRally.cfa50f2b6bf32f6b7952.jpg",
+    "static/media/kchuCityHall.jpg": "/static/media/kchuCityHall.77c81ded3d8a2329b767.jpg",
+    "static/media/negotiations.jpg": "/static/media/negotiations.b78aa1272391e7935735.jpg",
+    "index.html": "/index.html",
+    "main.0e56744d.css.map": "/static/css/main.0e56744d.css.map",
+    "main.2b6ea652.js.map": "/static/js/main.2b6ea652.js.map",
+    "787.cea32b94.chunk.js.map": "/static/js/787.cea32b94.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e56744d.css",
+    "static/js/main.2b6ea652.js"
+  ]
+}
