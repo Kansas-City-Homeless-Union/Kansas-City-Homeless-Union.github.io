@@ -36,9 +36,10 @@ const WhoWeAre = () => {
             placerat libero aliquam in.
           </Typography>
         </div>
+        {/* Swap with something we have rights to */}
         <ImgWithCaption
-          src={stopTheSweepRally}
-          caption="Stop the Sweep Rally at City Hall"
+            src={stopTheSweepRally}
+            caption="Stop the Sweep Rally at City Hall"
         />
       </ResponsiveContainer>
       <Typography style={{ marginBottom: 25 }}>
@@ -54,11 +55,12 @@ const WhoWeAre = () => {
         libero aliquam in.
       </Typography>
       <ResponsiveContainer>
-        <ImgWithCaption
-          src={bothMayorQs}
-          caption="Mayor Qadhafi speaking to Mayor Quinton Lucas"
-        />
-        <Typography>
+          {/* Same */}
+          <ImgWithCaption
+              src={bothMayorQs}
+              caption="Mayor Qadhafi speaking to Mayor Quinton Lucas"
+          />
+          <Typography>
           Aenean tristique orci purus, sit amet rhoncus nunc placerat a. In non
           est sed diam dapibus cursus a at ante. Donec fringilla urna iaculis
           ornare congue. Nullam facilisis mollis ligula eget elementum. Maecenas
@@ -78,6 +80,7 @@ const WhoWeAre = () => {
           eleifend massa. Donec nisi lectus, tristique eget commodo a, luctus ac
           lectus.
         </Typography>
+        {/* Same  */}
         <ImgWithCaption src={kchuCityHall} caption="KCHU at City Hall" />
       </ResponsiveContainer>
     </div>

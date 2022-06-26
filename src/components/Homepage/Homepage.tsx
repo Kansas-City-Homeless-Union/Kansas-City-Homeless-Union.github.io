@@ -7,12 +7,13 @@ import stopTheSweepRally from "./stopTheSweepRally.jpg";
 const Homepage = () => {
   return (
       <Stack gap={3}  divider={<Divider orientation="horizontal" flexItem />} >
-          <ImgWithCaption
+          {/* Swap this with somethign we have rights to */}
+          {/* <ImgWithCaption
               src={stopTheSweepRally}
               caption=""
               alt="Stop the Sweep Rally at City Hall"
               styleOverride={{ maxHeight: 350, maxWidth: "90%", marginBottom: 15 }}
-          />
+              /> */}
           <Typography variant="h2">Our Story</Typography>
           <Typography>
               The Kansas City Homeless Union was founded in January 2021 under the auspices of the Kansas City Tenants Union. As a union by and for the homeless, we have petitioned the City Council, Mayor, and others for better conditions for the homeless of this city.
