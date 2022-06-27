@@ -9,24 +9,44 @@ import {
   IconButton,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
 import { link } from "./NavBar.styles";
 import               "./NavBar.css";
 import { SocialIcon } from "react-social-icons";
 
+const iconStyles = {
+    small: {
+        marginLeft: 15,
+        width: 35,
+        height: 35,
+    },
+    large: {
+        marginLeft: 15,
+        width: 45,
+        height: 45,
+    }
+};
+/* const debounce = (fn, ms) => {
+ *     let timer: any;
+ *     return () => {
+ *         clearTimeout(timer);
+ *         timer = setTimeout(() => {
+ *             timer = null;
+ *             fn.apply(this);
+ *         }, ms)
+ *     };
+ * } */
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<any>(null);
   const [headerLarge, setHeaderLarge] = useState<boolean>(true);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowDimensions, setWindowDimensions] = useState<any>({ width: 500, height: 500, initialized: false});
 
-  const socialIconStyle = {
-    marginLeft: 15,
-    width: window.innerWidth > 500 ? 45 : 35,
-    height: window.innerWidth > 500 ? 45 : 35,
-  };
-
-  const navHeaderText = () => windowWidth > 1000 ? "KC Homeless Union" : "KCHU";
+  const navHeaderText = () => {
+      return windowDimensions.width > 1000 ? "KC Homeless Union" : "KCHU";
+  }
+  const socialIconStyle = () => {
+      return windowDimensions.width > 500 ? iconStyles.large : iconStyles.small;
+  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -36,12 +56,12 @@ const Navbar = () => {
     setAnchorElNav(e.target);
   };
 
-  const listenToScroll = () => {
+  const shrinkHeader = () => {
     const heightToHideFrom = 50;
     const winScroll = document.body.scrollTop ||
                       document.documentElement.scrollTop;
 
-    if (windowWidth || winScroll > heightToHideFrom) {
+    if (window.innerWidth || winScroll > heightToHideFrom) {
         headerLarge &&      // to limit setting state only the first time
         setHeaderLarge(false);
     } else {
@@ -49,17 +69,21 @@ const Navbar = () => {
     }
   };
 
-  const listenToResize = () => setWindowWidth(window.innerWidth);
+  const setCurrentWindowDimensions = () => {
+      setWindowDimensions({width: window.innerWidth, height: window.innerHeight, initialized: true});
+  };
 
   const HeaderText = () => <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText()}</a>;
 
-
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    window.addEventListener("resize", listenToResize);
+    if(!windowDimensions.initialized) {
+        setCurrentWindowDimensions();
+    }
+    window.addEventListener("scroll", shrinkHeader);
+    window.addEventListener("resize", setCurrentWindowDimensions);
       return () => {
-        window.removeEventListener("scroll", listenToScroll);
-        window.removeEventListener("resize", listenToResize);
+        window.removeEventListener("scroll", shrinkHeader);
+        window.removeEventListener("resize", setCurrentWindowDimensions);
     }
   })
 
@@ -92,41 +116,41 @@ const Navbar = () => {
                           open={!!anchorElNav}
                           onClose={handleCloseNavMenu}
                       >
-                          <Link to="/" style={link}>
+                          <a href="/" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>Home</Typography>
                               </MenuItem>
-                          </Link>
-                          {/* <Link to="/whoweare" style={link}>
+                          </a>
+                          {/* <a href="/whoweare" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                               <Typography>Who We Are</Typography>
                               </MenuItem>
-                              </Link> */}
-                          <Link to="/membership" style={link}>
+                              </a> */}
+                          <a href="/membership" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>Membership</Typography>
                               </MenuItem>
-                          </Link>
-                          <Link to="/news" style={link}>
+                          </a>
+                          <a href="/news" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>News</Typography>
                               </MenuItem>
-                          </Link>
-                          <Link to="/causes" style={link}>
+                          </a>
+                          <a href="/causes" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>What Causes Homelessness?</Typography>
                               </MenuItem>
-                          </Link>
-                          {/* <Link to="/resources" style={link}>
+                          </a>
+                          {/* <a href="/resources" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                               <Typography>Resources</Typography>
                               </MenuItem>
-                              </Link> */}
-                          <Link to="/contact" style={link}>
+                              </a> */}
+                          <a href="/contact" style={link}>
                               <MenuItem onClick={handleCloseNavMenu}>
                                   <Typography>Contact</Typography>
                               </MenuItem>
-                          </Link>
+                          </a>
                       </Menu>
                       <Typography style={{ margin: "auto", fontSize: headerLarge ? "5em" : "3em" }} component="h1" className="font-transition">
                           {/* <a href="/" style={{ textDecoration: "none", color: "white" }}>{navHeaderText(window.innerWidth, windowWidth)}</a> */}
@@ -135,13 +159,13 @@ const Navbar = () => {
                           <SocialIcon
                               url="https://www.facebook.com/kchomelessunion"
                               target="_blank"
-                              style={socialIconStyle}
+                              style={socialIconStyle()}
                               fgColor="#f7f7f7"
                           />
                           <SocialIcon
                               url="https://twitter.com/kchomelessunion"
                               target="_blank"
-                              style={socialIconStyle}
+                              style={socialIconStyle()}
                               fgColor="#f7f7f7"
                           />
                           {/* <SocialIcon

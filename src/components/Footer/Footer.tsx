@@ -1,13 +1,10 @@
 import "./footer.css";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-
-const breakpoint = 500;
 
 const Footer = () => {
   const linkStyle = {
-    marginRight: window.innerWidth < breakpoint ? 15 : 25,
-    fontSize: window.innerWidth < breakpoint ? ".925rem" : "1rem",
+    marginRight: 15,
+    fontSize: ".925rem",
     color: "#1c1c1c",
     textDecoration: "none",
   };
@@ -36,27 +33,27 @@ const Footer = () => {
           padding: 5,
         }}
       >
-        <Link to={"/"} className="footerLink">
+        <a href="/" className="footerLink">
           <Typography style={linkStyle}>Home</Typography>
-        </Link>
-        {/* <Link to={"/whoweare"} className="footerLink">
+        </a>
+        {/* <a href="/whoweare" className="footerLink">
             <Typography style={linkStyle}>Who We Are</Typography>
-            </Link> */}
-        <Link to={"/membership"} className="footerLink">
+            </a> */}
+        <a href="/membership" className="footerLink">
             <Typography style={linkStyle}>Membership</Typography>
-        </Link>
-        <Link to={"/news"} className="footerLink">
+        </a>
+        <a href="/news" className="footerLink">
             <Typography style={linkStyle}>News</Typography>
-        </Link>
-        <Link to={"/causes"} className="footerLink">
+        </a>
+        <a href="/causes" className="footerLink">
             <Typography style={linkStyle}>What Causes Homelessness?</Typography>
-        </Link>
-        {/* <Link to={"/resources"} className="footerLink">
+        </a>
+        {/* <a href="/resources"} className="footerLink">
             <Typography style={linkStyle}>Resources</Typography>
-            </Link> */}
-        <Link to={"/contact"} className="footerLink">
+            </a> */}
+        <a href="/contact" className="footerLink">
           <Typography style={linkStyle}>Contact</Typography>
-        </Link>
+        </a>
       </div>
       <Typography style={{ textAlign: "center", marginBottom: 15 }}>
         2022 ©HugYoHoodInc. All Rights Reserved.

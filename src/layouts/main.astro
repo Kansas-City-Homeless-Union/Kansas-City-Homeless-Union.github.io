@@ -1,8 +1,29 @@
-<!DOCTYPE html>
+---
+import '../App.css';
+import MuiThemeProvider from "../components/MuiThemeProvider/MuiThemeProvider";
+import Navbar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
+import { Box } from "@mui/material";
+const container = {
+  display: "grid",
+  gridTemplateColumns: "1fr 7fr 1fr",
+  paddingTop: 10,
+};
+---
+<style>
+.App {
+  text-align: center;
+  /* margin-bottom: 25px; */
+}
+
+html, body, .App, #root {
+  height: 100vh;
+}
+</style>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/potentialKCHULogo.ico" />
+    <link rel="icon" href="/static/potentialKCHULogo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -15,10 +36,10 @@
       property="og:description"
       content="Kansas City Homeless Union (KCHU) is a union of unhoused Kansas Citians, actively seeking equality and equity, and fighting against the system that perpetuates and sustains homelessness."
     />
-    <meta property="og:image:url" content="%PUBLIC_URL%/kchuLogo325.png" />
+    <meta property="og:image:url" content="/static/kchuLogo325.png" />
     <meta
       property="og:image:secure_url"
-      content="%PUBLIC_URL%/kchuLogo325.png"
+      content="/static/kchuLogo325.png"
     />
     <meta property="og:url" content="http://www.kchomelessunion.org" />
     <!-- twitter preview data -->
@@ -31,14 +52,26 @@
     <meta name="twitter:description" content="Kansas City Homeless Union (KCHU) is a union of unhoused Kansas Citians, actively seeking equality and equity, and fighting against the system that perpetuates and sustains homelessness." />
     <meta
       name="twitter:image:url"
-      content="%PUBLIC_URL%/kchuLogo325.png"
+      content="%static%/kchuLogo325.png"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/kchuLogo325.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="/static/kchuLogo325.png" />
+    <link rel="manifest" href="/static/manifest.json" />
     <title>KCHU</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div className="App">
+      <MuiThemeProvider>
+        <div>
+          <Navbar client:load />
+          <Box style={container}>
+              <div />
+              <slot />
+              <div />
+          </Box>
+          <Footer />
+        </div>
+      </MuiThemeProvider>
+    </div>
   </body>
 </html>
