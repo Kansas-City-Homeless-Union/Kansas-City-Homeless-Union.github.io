@@ -120,28 +120,28 @@ const Homepage = () => {
         </Typography>
       </Stack>
       {/* <Typography
-              style={{
-              margin: "auto",
-              marginBottom: 20,
-              width: determineTextWidth(window.innerWidth),
-              }}
-              >
-              </Typography> */}
+                style={{
+                margin: "auto",
+                marginBottom: 20,
+                width: determineTextWidth(window.innerWidth),
+                }}
+                >
+                </Typography> */}
       {/* <div>
-              <Typography variant="h4">OUR DEMANDS</Typography>
-              <Typography variant="h6" style={demandStyle}>
-              Demand 1
-              </Typography>
-              <Typography variant="h6" style={demandStyle}>
-              Demand 2
-              </Typography>
-              <Typography variant="h6" style={demandStyle}>
-              Demand 3
-              </Typography>
-              <Typography variant="h6" style={demandStyle}>
-              Demand 4
-              </Typography>
-              </div> */}
+                <Typography variant="h4">OUR DEMANDS</Typography>
+                <Typography variant="h6" style={demandStyle}>
+                Demand 1
+                </Typography>
+                <Typography variant="h6" style={demandStyle}>
+                Demand 2
+                </Typography>
+                <Typography variant="h6" style={demandStyle}>
+                Demand 3
+                </Typography>
+                <Typography variant="h6" style={demandStyle}>
+                Demand 4
+                </Typography>
+                </div> */}
     </Stack>
   );
 };
