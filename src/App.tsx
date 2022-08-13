@@ -17,9 +17,6 @@ import { HomepageMetaTags } from "./components/HomepageMetaTags/HomepageMetaTags
 function App() {
   return (
     <>
-      Kansas City Homeless Union (KCHU) is a union of unhoused Kansas Citians,
-      actively seeking equality and equity, and fighting against the system that
-      perpetuates and sustains homelessness.
       <HomepageMetaTags />
       <div className="App">
         <Router>
