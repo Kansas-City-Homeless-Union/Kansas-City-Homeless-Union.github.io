@@ -1,64 +1,36 @@
 import "./footer.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-
-const breakpoint = 500;
+import * as styles from "./footer.styles";
 
 const Footer = () => {
-  const linkStyle = {
-    marginRight: window.innerWidth < breakpoint ? 15 : 25,
-    fontSize: window.innerWidth < breakpoint ? ".925rem" : "1rem",
-    color: "#1c1c1c",
-    textDecoration: "none",
-  };
-
   return (
-    <div
-      style={{
-        minHeight: 100,
-        margin: "auto",
-        marginTop: 20,
-        backgroundColor: "white",
-        color: "#1c1c1c",
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <div
-        style={{ borderTop: "1px solid #e8e8e8", width: "95%", margin: "auto" }}
-      />
-      <div
-        style={{
-          display: "flex",
-          maxWidth: 900,
-          margin: "auto",
-          padding: 5,
-        }}
-      >
+    <div style={styles.footerContainer}>
+      <div style={styles.footerTopBorder} />
+      <div style={styles.footerLinkContainer}>
         <Link to={"/"} className="footerLink">
-          <Typography style={linkStyle}>Home</Typography>
+          <Typography>Home</Typography>
         </Link>
         {/* <Link to={"/whoweare"} className="footerLink">
-            <Typography style={linkStyle}>Who We Are</Typography>
+            <Typography >Who We Are</Typography>
             </Link> */}
         <Link to={"/membership"} className="footerLink">
-            <Typography style={linkStyle}>Membership</Typography>
+          <Typography>Membership</Typography>
         </Link>
         <Link to={"/news"} className="footerLink">
-            <Typography style={linkStyle}>News</Typography>
+          <Typography>News</Typography>
         </Link>
         <Link to={"/causes"} className="footerLink">
-            <Typography style={linkStyle}>What Causes Homelessness?</Typography>
+          <Typography>What Causes Homelessness?</Typography>
         </Link>
         {/* <Link to={"/resources"} className="footerLink">
-            <Typography style={linkStyle}>Resources</Typography>
+            <Typography >Resources</Typography>
             </Link> */}
         <Link to={"/contact"} className="footerLink">
-          <Typography style={linkStyle}>Contact</Typography>
+          <Typography>Contact</Typography>
         </Link>
       </div>
-      <Typography style={{ textAlign: "center", marginBottom: 15 }}>
+      <Typography style={styles.footerBottomLabelStyle}>
         2022 ©HugYoHoodInc. All Rights Reserved.
       </Typography>
     </div>
